@@ -23,9 +23,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), SegundaActivity.class);
 
+                // instanciar objeto
+                Usuario user = new Usuario("ronaldo", "iarlen@gmail.com");
+
                 //passar dados
                 intent.putExtra("nome", "Iarlen");
                 intent.putExtra("idade",27);
+                intent.putExtra("objeto", user);
+
                 startActivity(intent);
             }
         });

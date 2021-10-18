@@ -21,7 +21,9 @@ public class SegundaActivity extends AppCompatActivity {
         Bundle dados = getIntent().getExtras();
         String nome = dados.getString("nome");
         int idade = dados.getInt("idade");
-        txtNome.setText(nome);
+
+        Usuario usuario = (Usuario) dados.getSerializable("objeto");
+        txtNome.setText(usuario.getNome());
         txtIdade.setText(String.valueOf(idade));
     }
 }
